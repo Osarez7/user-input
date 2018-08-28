@@ -25,9 +25,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        Toast.makeText(this, "CLICK!!!", Toast.LENGTH_SHORT).show();
         mCounter++;
         txtCountValue.setText(String.valueOf((mCounter)));
+        Toast.makeText(this, "CLICK!!!", Toast.LENGTH_SHORT).show();
     }
 
 
