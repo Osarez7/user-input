@@ -18,15 +18,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.d(TAG, "onCreate");
+
         setContentView(R.layout.activity_main);
         txtCountValue = findViewById(R.id.txtCounterValue);
 
-    /*    if(savedInstanceState != null){
-            mCounter = savedInstanceState.getInt(COUNTER, 0);
-        }*/
+//        if(savedInstanceState != null){
+//            mCounter = savedInstanceState.getInt(COUNTER, 0);
+//        }
+
         txtCountValue.setText(String.valueOf(mCounter));
-
-
 
         //se asigna un click listener a nuestro boton
         Button clickButton = findViewById(R.id.btn_count);
