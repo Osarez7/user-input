@@ -23,9 +23,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         txtCountValue = findViewById(R.id.txtCounterValue);
 
-//        if(savedInstanceState != null){
-//            mCounter = savedInstanceState.getInt(COUNTER, 0);
-//        }
+        if(savedInstanceState != null){
+            mCounter = savedInstanceState.getInt(COUNTER, 0);
+        }
 
         txtCountValue.setText(String.valueOf(mCounter));
 
@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         Button secondScreen = findViewById(R.id.btn_second_screen);
         secondScreen.setOnClickListener(this);
+
     }
 
     @Override
@@ -73,6 +74,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
+        Log.d(TAG, "onSaveInstanceState:");
         outState.putInt(COUNTER, mCounter);
         super.onSaveInstanceState(outState);
     }
