@@ -2,6 +2,7 @@ package co.edu.intecap.userinput;
 
 import androidx.appcompat.app.AppCompatActivity;
 import butterknife.BindView;
+import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 import android.os.Bundle;
@@ -20,6 +21,7 @@ public class SaludoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_saludo); //aqui asignamos el layout
+        ButterKnife.bind(this);
     }
 
 
